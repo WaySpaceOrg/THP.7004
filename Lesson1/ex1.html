@@ -1,23 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
 <head>
-  <meta charset="utf-8">
-  <title>ประวัติส่วนตัว</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7dce5">
+<title>ประวัติส่วนตัว · THP.7004</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-.course-nav,.page-nav{font:14px/1.5 Prompt,Arial,sans-serif;display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:18px auto;padding:12px 16px;max-width:1100px;border:1px solid #efd6df;border-radius:14px;background:#fff7fa;color:#98506b}
-.course-nav a,.page-nav a{color:#98506b;text-decoration:none;padding:5px 9px;border-radius:8px}
-.course-nav a:hover,.page-nav a:hover{background:#f7e1e8}
-.course-nav .home{font-weight:700}.course-nav details{position:relative}.course-nav summary{cursor:pointer;padding:5px 9px}
-.all-pages{position:absolute;z-index:10;top:30px;left:0;width:min(300px,80vw);max-height:60vh;overflow:auto;padding:10px;background:#fffafc;border:1px solid #efd6df;border-radius:12px;box-shadow:0 12px 30px #98506b22;display:grid;grid-template-columns:1fr}
-.all-pages a{padding:7px}.page-nav{justify-content:space-between}.disabled{color:#c5aab4}
-body{font-family:Prompt,Arial,sans-serif}.course-footer{max-width:1100px;margin:22px auto;padding:12px 16px;text-align:center;color:#a17c8a;font:12px Prompt,Arial,sans-serif}
+:root{--rose:#bd6681;--deep:#98506b;--cream:#fffaf6;--ink:#513844;--muted:#927984;--line:#efdce2;--shadow:0 16px 45px #9b64721a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:Prompt,sans-serif;background:radial-gradient(circle at 8% 5%,#fceaf0,transparent 28rem),radial-gradient(circle at 95% 35%,#f8e9e8,transparent 25rem),var(--cream)}
+.wrap{width:min(1080px,calc(100% - 40px));margin:auto}
+header{padding:24px 0}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:14px}
+.brand{font:800 13px "DM Sans";letter-spacing:.18em;color:var(--ink)}
+.brand span{color:var(--rose)}
+.back{display:inline-flex;align-items:center;gap:8px;padding:10px 17px;border:1px solid #d9adbb;border-radius:999px;background:#fff9fa;color:var(--deep);font-size:12px;font-weight:600;text-decoration:none;transition:.2s}
+.back:hover{background:#f7e1e8;transform:translateY(-2px)}
+main{padding:34px 0 70px}
+.eyebrow{font:700 11px "DM Sans";letter-spacing:.2em;text-transform:uppercase;color:var(--deep)}
+.hero{position:relative;overflow:hidden;padding:clamp(28px,6vw,58px);border:1px solid #efd6df;border-radius:30px;background:linear-gradient(120deg,#fff8faed,#f4dce5ed);box-shadow:var(--shadow)}
+.hero:after{content:"✿";position:absolute;right:4%;top:-40px;font:210px Georgia;color:#bd66811a;pointer-events:none}
+h1{position:relative;z-index:1;margin:12px 0 8px;font-size:clamp(34px,6vw,54px);line-height:1.2;letter-spacing:-.04em}
+h1 em{font-style:normal;color:var(--rose)}
+.lead{position:relative;z-index:1;margin:0;color:var(--muted);font-size:14px;line-height:1.9}
+.profile{position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:30px}
+.info{padding:20px 22px;border:1px solid var(--line);border-radius:18px;background:#ffffffc9}
+.info small{display:block;margin-bottom:8px;color:var(--muted);font:700 10px "DM Sans";letter-spacing:.15em;text-transform:uppercase}
+.info strong{font-size:20px;font-weight:600;overflow-wrap:anywhere}
+.footer-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:22px}
+.nav-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 19px;border-radius:999px;text-decoration:none;font-size:12px;font-weight:600;transition:.2s}
+.nav-btn.primary{background:var(--deep);color:white;box-shadow:0 8px 20px #98506b30}
+.nav-btn.primary:hover{background:#81415a;transform:translateY(-2px)}
+.nav-btn.soft{border:1px solid var(--line);background:#fff9fa;color:var(--deep)}
+.nav-btn.soft:hover{border-color:#d9adbb;background:#fff0f4}
+footer{text-align:center;padding:28px 0;color:#a78692;font-size:11px;letter-spacing:.08em}
+footer b{color:var(--rose)}
+@media(max-width:560px){.wrap{width:calc(100% - 28px)}.brand{font-size:11px}.back{padding:9px 12px;font-size:11px}.profile{grid-template-columns:1fr}.hero:after{right:-25px;font-size:160px}.footer-nav{align-items:stretch}.nav-btn{padding:11px 13px;font-size:11px}}
 </style>
-<style>.course-nav,.page-nav{font:14px/1.5 Prompt,Arial,sans-serif;display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:18px auto;padding:12px 16px;max-width:1100px;border:1px solid #efd6df;border-radius:14px;background:#fff7fa;color:#98506b}.course-nav a,.page-nav a{color:#98506b;text-decoration:none;padding:5px 9px;border-radius:8px}.course-nav a:hover,.page-nav a:hover{background:#f7e1e8}.course-nav .home{font-weight:700}.course-nav details{position:relative}.course-nav summary{cursor:pointer;padding:5px 9px}.all-pages{position:absolute;z-index:10;top:30px;left:0;width:min(300px,80vw);max-height:60vh;overflow:auto;padding:10px;background:#fffafc;border:1px solid #efd6df;border-radius:12px;box-shadow:0 12px 30px #98506b22;display:grid;grid-template-columns:1fr}.all-pages a{padding:7px}.page-nav{justify-content:space-between}.disabled{color:#c5aab4}.course-footer{max-width:1100px;margin:22px auto;padding:12px 16px;text-align:center;color:#a17c8a;font:12px Prompt,Arial,sans-serif}</style></head>
-<body><nav class="course-nav"><a class="home" href="../index.html">♡ หน้าหลัก</a><a href="../index.html#lessons">บทเรียนทั้งหมด</a><details><summary>เลือกแบบฝึกหัด</summary><div class="all-pages"><a href="../Lesson1/ex1.html">Lesson 1 · แนะนำตัว</a><a href="../Lesson1/ex2.html">Lesson 1 · รูปภาพและเนื้อหา</a><a href="../Lesson1/ex3.html">Lesson 1 · ตารางข้อมูล</a><a href="../Lesson1/ex4.html">Lesson 1 · แบบฟอร์มเข้าสู่ระบบ</a><a href="../Lesson2/ex1.html">Lesson 2 · Semantic Elements</a><a href="../Lesson2/ex2.html">Lesson 2 · เมนูอาหาร</a><a href="../Lesson2/ex3.html">Lesson 2 · จองโต๊ะ</a><a href="../Lesson2/ex4.html">Lesson 2 · คาเฟ่แมวเหมียว</a><a href="../Lesson2/ex5.html">Lesson 2 · Links & Sitemap</a><a href="../Lesson2/ex6.html">Lesson 2 · บ้านแมวเหมียว</a><a href="../Lesson3/ex1.html">Lesson 3 · JavaScript Variables</a><a href="../Lesson3/ex2.html">Lesson 3 · DOM Text</a><a href="../Lesson3/ex3.html">Lesson 3 · คำนวณราคา</a><a href="../Lesson3/ex4.html">Lesson 3 · ปุ่มถูกใจ</a><a href="../Lesson3/ex5.html">Lesson 3 · เซียมซี</a><a href="../Lesson3/ex6.html">Lesson 3 · BMI Calculator</a></div></details></nav><nav class="page-nav"><span class="disabled">← เริ่มต้น</span><a href="../Lesson1/ex2.html">รูปภาพและเนื้อหา →</a></nav>
-<nav class="course-nav" aria-label="เมนูนำทาง"><a class="home" href="../index.html">♡ หน้าหลัก</a><a href="../index.html#lessons">บทเรียนทั้งหมด</a><details><summary>เลือกแบบฝึกหัด</summary><div class="all-pages"><a href="../Lesson1/ex1.html">Lesson 1 · แนะนำตัว</a><a href="../Lesson1/ex2.html">Lesson 1 · รูปภาพและเนื้อหา</a><a href="../Lesson1/ex3.html">Lesson 1 · ตารางข้อมูล</a><a href="../Lesson1/ex4.html">Lesson 1 · แบบฟอร์มเข้าสู่ระบบ</a><a href="../Lesson2/ex1.html">Lesson 2 · Semantic Elements</a><a href="../Lesson2/ex2.html">Lesson 2 · เมนูอาหาร</a><a href="../Lesson2/ex3.html">Lesson 2 · จองโต๊ะ</a><a href="../Lesson2/ex4.html">Lesson 2 · คาเฟ่แมวเหมียว</a><a href="../Lesson2/ex5.html">Lesson 2 · Links & Sitemap</a><a href="../Lesson2/ex6.html">Lesson 2 · บ้านแมวเหมียว</a><a href="../Lesson3/ex1.html">Lesson 3 · JavaScript Variables</a><a href="../Lesson3/ex2.html">Lesson 3 · DOM Text</a><a href="../Lesson3/ex3.html">Lesson 3 · คำนวณราคา</a><a href="../Lesson3/ex4.html">Lesson 3 · ปุ่มถูกใจ</a><a href="../Lesson3/ex5.html">Lesson 3 · เซียมซี</a><a href="../Lesson3/ex6.html">Lesson 3 · BMI Calculator</a></div></details></nav><nav class="page-nav" aria-label="หน้าก่อนหน้าและถัดไป"><span class="disabled">← เริ่มต้น</span><a href="../Lesson1/ex2.html">รูปภาพและเนื้อหา →</a></nav>
-  <h1>Aungsumalin Chumbunyang</h1>
-  <p>420</p>
-  <p>22222222222222</p>
-<footer class="course-footer">THP.7004 · <a href="../index.html" style="color:#98506b">กลับสู่หน้าหลัก</a> · Exercise 1/16</footer>
-<footer class="course-footer">THP.7004 · <a href="../index.html" style="color:#98506b">กลับสู่หน้าหลัก</a> · Exercise 1/16</footer></body>
+</head>
+<body>
+<header class="wrap">
+<nav class="topbar" aria-label="เมนูหลัก">
+<div class="brand">MY LITTLE <span>WEB SPACE</span></div>
+<a class="back" href="../index.html"><span aria-hidden="true">←</span> กลับหน้าหลัก</a>
+</nav>
+</header>
+<main class="wrap">
+<section class="hero" aria-labelledby="page-title">
+<div class="eyebrow">Lesson 01 · Exercise 01</div>
+<h1 id="page-title">ประวัติส่วนตัว<span style="color:var(--rose)">.</span></h1>
+<p class="lead">ยินดีต้อนรับสู่หน้าแนะนำตัวของฉัน — เริ่มต้นการเรียนรู้ HTML ไปด้วยกัน ♡</p>
+<div class="profile">
+<div class="info"><small>Name</small><strong>Aungsumalin Chumbunyang</strong></div>
+<div class="info"><small>Number</small><strong>420</strong></div>
+<div class="info" style="grid-column:1/-1"><small>Personal note</small><strong>22222222222222</strong></div>
+</div>
+</section>
+<nav class="footer-nav" aria-label="นำทางระหว่างบทเรียน">
+<a class="nav-btn soft" href="../index.html#lessons">♡ บทเรียนทั้งหมด</a>
+<a class="nav-btn primary" href="ex2.html">แบบฝึกหัดถัดไป <span aria-hidden="true">→</span></a>
+</nav>
+</main>
+<footer class="wrap">MADE WITH <b>♡</b> AND A LITTLE BIT OF CODE · THP.7004</footer>
+</body>
 </html>
