@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ฟอร์มเข้าสู่ระบบ</title>
+<style>
+.course-nav,.page-nav{font:14px/1.5 Prompt,Arial,sans-serif;display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:18px auto;padding:12px 16px;max-width:1100px;border:1px solid #efd6df;border-radius:14px;background:#fff7fa;color:#98506b}
+.course-nav a,.page-nav a{color:#98506b;text-decoration:none;padding:5px 9px;border-radius:8px}
+.course-nav a:hover,.page-nav a:hover{background:#f7e1e8}
+.course-nav .home{font-weight:700}.course-nav details{position:relative}.course-nav summary{cursor:pointer;padding:5px 9px}
+.all-pages{position:absolute;z-index:10;top:30px;left:0;width:min(300px,80vw);max-height:60vh;overflow:auto;padding:10px;background:#fffafc;border:1px solid #efd6df;border-radius:12px;box-shadow:0 12px 30px #98506b22;display:grid;grid-template-columns:1fr}
+.all-pages a{padding:7px}.page-nav{justify-content:space-between}.disabled{color:#c5aab4}
+body{font-family:Prompt,Arial,sans-serif}.course-footer{max-width:1100px;margin:22px auto;padding:12px 16px;text-align:center;color:#a17c8a;font:12px Prompt,Arial,sans-serif}
+</style>
 </head>
 <body>
+<nav class="course-nav" aria-label="เมนูนำทาง"><a class="home" href="../index.html">♡ หน้าหลัก</a><a href="../index.html#lessons">บทเรียนทั้งหมด</a><details><summary>เลือกแบบฝึกหัด</summary><div class="all-pages"><a href="../Lesson1/ex1.html">Lesson 1 · แนะนำตัว</a><a href="../Lesson1/ex2.html">Lesson 1 · รูปภาพและเนื้อหา</a><a href="../Lesson1/ex3.html">Lesson 1 · ตารางข้อมูล</a><a href="../Lesson1/ex4.html">Lesson 1 · แบบฟอร์มเข้าสู่ระบบ</a><a href="../Lesson2/ex1.html">Lesson 2 · Semantic Elements</a><a href="../Lesson2/ex2.html">Lesson 2 · เมนูอาหาร</a><a href="../Lesson2/ex3.html">Lesson 2 · จองโต๊ะ</a><a href="../Lesson2/ex4.html">Lesson 2 · คาเฟ่แมวเหมียว</a><a href="../Lesson2/ex5.html">Lesson 2 · Links & Sitemap</a><a href="../Lesson2/ex6.html">Lesson 2 · บ้านแมวเหมียว</a><a href="../Lesson3/ex1.html">Lesson 3 · JavaScript Variables</a><a href="../Lesson3/ex2.html">Lesson 3 · DOM Text</a><a href="../Lesson3/ex3.html">Lesson 3 · คำนวณราคา</a><a href="../Lesson3/ex4.html">Lesson 3 · ปุ่มถูกใจ</a><a href="../Lesson3/ex5.html">Lesson 3 · เซียมซี</a><a href="../Lesson3/ex6.html">Lesson 3 · BMI Calculator</a></div></details></nav><nav class="page-nav" aria-label="หน้าก่อนหน้าและถัดไป"><a href="../Lesson1/ex3.html">← ตารางข้อมูล</a><a href="../Lesson2/ex1.html">Semantic Elements →</a></nav>
     <form action="" method="POST">
   <label>email</label>
   <input type="email" name="email">
@@ -13,5 +23,6 @@
 	<input type="password">
   <button type="submit">ส่งฟอร์ม</button>
 </form>
+<footer class="course-footer">THP.7004 · <a href="../index.html" style="color:#98506b">กลับสู่หน้าหลัก</a> · Exercise 4/16</footer>
 </body>
 </html>
